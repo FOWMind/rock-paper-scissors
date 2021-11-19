@@ -130,7 +130,7 @@ body {
   max-width: 325px;
   flex-wrap: wrap;
   margin: 4rem auto;
-  background: url('./images/bg-triangle.svg') center / 70% no-repeat;
+  background: url('../images/bg-triangle.svg') center / 70% no-repeat;
 }
 
 .elements .elements-item {
