@@ -7,7 +7,7 @@ const resultView = ({ gameResult, localPick, opponentPick }) => `
           <picture class="elements-item-pic">
             <img
               class="elements-item-img"
-              src="/images/icon-${localPick}.svg"
+              src="./images/icon-${localPick}.svg"
               alt=${localPick}
               draggable="false"
             />
@@ -25,7 +25,7 @@ const resultView = ({ gameResult, localPick, opponentPick }) => `
         <picture class="elements-item-pic">
           <img
             class="elements-item-img"
-            src="/images/icon-${opponentPick}.svg"
+            src="./images/icon-${opponentPick}.svg"
             alt=${opponentPick}
             draggable="false"
           />
