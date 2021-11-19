@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <!-- displays site properly based on user's device -->
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Styles -->
+    <link href="/css/main.css" rel="stylesheet" />
+
+    <title>Rock, Paper, Scissors game</title>
+
+    <!-- Score Rules You Picked The House Picked You Win You Lose Play Again -->
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+        color: #ccc;
+      }
+      .attribution a {
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="logo">
+          <img
+            class="logo-img"
+            src="/images/logo.svg"
+            alt="ROCK PAPER SCISSORS"
+            draggable="false"
+          />
+        </div>
+        <div class="score">
+          <span class="score-item score-name">Score</span>
+          <span class="score-item score-value" id="score">0</span>
+        </div>
+      </header>
+
+      <main>
+        <div id="view">
+          <section class="elements">
+            <div class="elements-item paper" id="paper" data-pick="paper">
+              <picture class="elements-item-pic" data-pick="rock">
+                <img
+                  class="elements-item-img"
+                  src="/images/icon-paper.svg"
+                  alt="Paper"
+                  draggable="false"
+                  data-pick="paper"
+                />
+              </picture>
+            </div>
+            <div
+              class="elements-item scissors"
+              id="scissors"
+              data-pick="scissors"
+            >
+              <picture class="elements-item-pic" data-pick="rock">
+                <img
+                  class="elements-item-img"
+                  src="/images/icon-scissors.svg"
+                  alt="Scissors"
+                  draggable="false"
+                  data-pick="scissors"
+                />
+              </picture>
+            </div>
+            <div class="elements-item rock" id="rock" data-pick="rock">
+              <picture class="elements-item-pic" data-pick="rock">
+                <img
+                  class="elements-item-img"
+                  src="/images/icon-rock.svg"
+                  alt="Rock"
+                  draggable="false"
+                  data-pick="rock"
+                />
+              </picture>
+            </div>
+          </section>
+        </div>
+        <div class="rules">
+          <button class="button button-outlined rules-button">Rules</button>
+        </div>
+      </main>
+
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="https://github.com/StyledDEV/" target="_blank">StyledDEV</a>.
+      </div>
+    </div>
+
+    <script src="js/index.js"></script>
+  </body>
+</html>
