@@ -52,6 +52,7 @@ const resultView = ({ gameResult, localPick, opponentPick }) => `
 
 // Get opponent pick from user pick
 const game = (localPick) => {
+  console.log(localPick)
   if (!localPick) {
     console.error('Please pick one item')
     return
