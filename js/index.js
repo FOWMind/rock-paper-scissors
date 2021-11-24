@@ -145,7 +145,12 @@ const handleTitle = (scoreValue) => {
   removeTimeout()
 }
 
+const closeModal = () => {
+  modalContainer.innerHTML = ''
+}
+
 const documentTitle = document.title
+const modalContainer = document.getElementById('modal-container')
 const view = document.getElementById('view')
 
 // Save the first part of the view (pick select section)
@@ -156,6 +161,7 @@ const paper = document.getElementById('paper')
 const scissors = document.getElementById('scissors')
 const rock = document.getElementById('rock')
 const score = document.getElementById('score')
+const openModal = document.getElementById('open-modal')
 
 // Detect score changes for saving it in localStorage
 const observer = new MutationObserver((mutations) => {
@@ -179,6 +185,25 @@ observer.observe(score, {
 getScoreFromLocal()
 
 document.addEventListener('click', (e) => {
+  if (e.target === openModal) {
+    const modal = `
+      <div class="modal">
+        <div class="modal-content">
+          <section class="modal-first">
+            <h2 class="title">Rules</h2>
+            <button class="modal-close" onclick="closeModal()">
+              <img src="./images/icon-close.svg" alt="X" />
+            </button>
+          </section>
+          <section class="modal-last">
+            <img src="./images/rules.png" alt="Rules schema" draggable="false" />
+          </section>
+        </div>
+      </div>`
+
+    modalContainer.innerHTML = modal
+  }
+
   const localPick = e.target.getAttribute('data-pick')
 
   // If the element clicked is one pick
